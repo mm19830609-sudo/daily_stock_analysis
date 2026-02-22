@@ -95,7 +95,7 @@
 | Secret 名称 | 说明 | 必填 |
 |------------|------|:----:|
 | `WECHAT_WEBHOOK_URL` | 企业微信 Webhook URL | 可选 |
-| `FEISHU_WEBHOOK_URL` | 飞书 Webhook URL | 可选 |
+| `FEISHU_WEBHOOK_URL` | 飞书 Webhook URL | 可选 |13890070888
 | `TELEGRAM_BOT_TOKEN` | Telegram Bot Token（@BotFather 获取） | 可选 |
 | `TELEGRAM_CHAT_ID` | Telegram Chat ID | 可选 |
 | `TELEGRAM_MESSAGE_THREAD_ID` | Telegram Topic ID (用于发送到子话题) | 可选 |
