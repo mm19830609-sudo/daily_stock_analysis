@@ -346,14 +346,19 @@ class Config:
         
         # 解析自选股列表（逗号分隔，统一为大写 Issue #355）
         stock_list_str = os.getenv('STOCK_LIST', '')
-        stock_list = [
-            (c or "").strip().upper()
-            for c in stock_list_str.split(',')
-            if (c or "").strip()
-        ]
+
+        # 如果设置为 all，则启用自动股票池
+        if stock_list_str.lower() == "all":
+            stock_list = []
+        else:
+            stock_list = [
+                (c or "").strip().upper()
+                for c in stock_list_str.split(',')
+                if (c or "").strip()
+            ]
         
         # 如果没有配置，使用默认的示例股票
-        if not stock_list:
+        if not stock_list and stock_list_str.lower() != "all":
             stock_list = ['600519', '000001', '300750']
         
         # 解析搜索引擎 API Keys（支持多个 key，逗号分隔）
